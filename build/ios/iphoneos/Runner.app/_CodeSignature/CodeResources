@@ -110,7 +110,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		X2DVOwisd/mo8FCNvRE8yk9QV9U=
+		UCobVN1Qd8GpQEbVe433NWJKDNQ=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Hg3gWgDB7dErYXls1KnRjPwDg3g=
+		BgrtVGlYIEccXeqs9P/srkpuq9g=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
@@ -142,7 +142,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		8WWQLg9mDpdLwyLMbvXQ+cS6xHo=
+		T/f6bIdBCYQY+ACd5+2FHL1PVlo=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -154,7 +154,7 @@
 		</data>
 		<key>Frameworks/Flutter.framework/Flutter</key>
 		<data>
-		NJ7Lkff1rOVBuqYadr0JeH8kEG0=
+		hmFrbyxn6rajb855af7VN2XUzLs=
 		</data>
 		<key>Frameworks/Flutter.framework/Info.plist</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>Frameworks/beacon_broadcast.framework/beacon_broadcast</key>
 		<data>
-		1r+BYmfinz78dZGFZWpkVfMk510=
+		pamuRvD57VkU8YGU1L0tdcgqM2k=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
@@ -545,11 +545,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			X2DVOwisd/mo8FCNvRE8yk9QV9U=
+			UCobVN1Qd8GpQEbVe433NWJKDNQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			cyjkA8gJIPPw8KNBr484gXyknpub5KYh9rOZlTczuwo=
+			8Q8/PdVZJR0uwPJFCr9KvkfIaS7FToBHuYg1e3KJXH0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -567,11 +567,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Hg3gWgDB7dErYXls1KnRjPwDg3g=
+			BgrtVGlYIEccXeqs9P/srkpuq9g=
 			</data>
 			<key>hash2</key>
 			<data>
-			IZy22EM0Z+b3BYmhdFFVbrd+Cx4uCiC1Crr95xobFoU=
+			puk/ALbhXhZv8Axh086xKUADvJwS5a3m2ZhKVn2Cqv8=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
@@ -633,11 +633,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8WWQLg9mDpdLwyLMbvXQ+cS6xHo=
+			T/f6bIdBCYQY+ACd5+2FHL1PVlo=
 			</data>
 			<key>hash2</key>
 			<data>
-			ms4DRIJ2JpCL9nl3H4icu9llgr+3+jvs2Ltx9D1+ziY=
+			JvzTIg4q7FzCcwjGTlHj9xALRAwsGY7oTlvPnYgwDOY=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -666,11 +666,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NJ7Lkff1rOVBuqYadr0JeH8kEG0=
+			hmFrbyxn6rajb855af7VN2XUzLs=
 			</data>
 			<key>hash2</key>
 			<data>
-			tpBUAoUPaRIdl9GyqXQ+/kBSmuz/Pyqvoz09CTANvlY=
+			en/MnUmtpWqQRUHqo06qSTVOWodWqTWJX2NUoHlbOJo=
 			</data>
 		</dict>
 		<key>Frameworks/Flutter.framework/Info.plist</key>
@@ -732,11 +732,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1r+BYmfinz78dZGFZWpkVfMk510=
+			pamuRvD57VkU8YGU1L0tdcgqM2k=
 			</data>
 			<key>hash2</key>
 			<data>
-			RXEDfSM+QxFrlhMsZP9TNfgmAWqJXSggFTSs1U2rUjQ=
+			9tFuYq/77peec/Wtn6uAbizJh5KubIvqntf7OZRFUHQ=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>

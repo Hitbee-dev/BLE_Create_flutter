@@ -89,7 +89,7 @@ class _HomeState extends State<Home> {
     final statefontcolor = [Colors.grey[600], Colors.black];
 
     return Container(
-      margin: const EdgeInsets.only(left: 30, right: 30, top: 20),
+      margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
       padding: const EdgeInsets.all(10.0),
       decoration: BoxDecoration(
           border: Border.all(color: Colors.black, width: 2),
@@ -124,7 +124,7 @@ class _HomeState extends State<Home> {
 
   Widget _SetUUID() {
     return Container(
-        margin: const EdgeInsets.only(left: 30, right: 30, top: 20, bottom: 20),
+        margin: const EdgeInsets.only(left: 15, right: 15, top: 20, bottom: 20),
         padding: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
             border: Border.all(color: Colors.black, width: 2),
@@ -132,52 +132,55 @@ class _HomeState extends State<Home> {
         child: Row(
           children: [
             Text("UUID : ", style: TextStyle(fontWeight: FontWeight.bold)),
-            Text("${uuid}", style: TextStyle(fontSize: 11))
+            Text("${uuid}", style: TextStyle(fontSize: 12))
           ],
         ));
   }
 
   Widget _SetMajor() {
     return Container(
-        margin: const EdgeInsets.only(left: 30, bottom: 20),
+        margin: const EdgeInsets.only(left: 15, bottom: 20),
         padding: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
             border: Border.all(color: Colors.black, width: 2),
             borderRadius: BorderRadius.all(Radius.circular(5))),
         child: Row(
           children: [
-            Text("Major : ", style: TextStyle(fontWeight: FontWeight.bold)),
-            Text("${majorId}", style: TextStyle(fontSize: 12))
+            Text("Major : ",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+            Text("${majorId}", style: TextStyle(fontSize: 11))
           ],
         ));
   }
 
   Widget _SetMinor() {
     return Container(
-        margin: const EdgeInsets.only(left: 8, right: 8, bottom: 20),
+        margin: const EdgeInsets.only(left: 13, right: 13, bottom: 20),
         padding: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
             border: Border.all(color: Colors.black, width: 2),
             borderRadius: BorderRadius.all(Radius.circular(5))),
         child: Row(
           children: [
-            Text("Minor : ", style: TextStyle(fontWeight: FontWeight.bold)),
-            Text("${minorId}", style: TextStyle(fontSize: 12))
+            Text("Minor : ",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+            Text("${minorId}", style: TextStyle(fontSize: 11))
           ],
         ));
   }
 
   Widget _SetTxPower() {
     return Container(
-        margin: const EdgeInsets.only(right: 30, bottom: 20),
+        margin: const EdgeInsets.only(right: 15, bottom: 20),
         padding: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
             border: Border.all(color: Colors.black, width: 2),
             borderRadius: BorderRadius.all(Radius.circular(5))),
         child: Row(
           children: [
-            Text("TxPower : ", style: TextStyle(fontWeight: FontWeight.bold)),
-            Text("${transmissionPower}", style: TextStyle(fontSize: 12))
+            Text("TxPower : ",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+            Text("${transmissionPower}", style: TextStyle(fontSize: 11))
           ],
         ));
   }

@@ -58,6 +58,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -229,21 +230,40 @@ class _HomeState extends State<Home> {
 
   Widget _Monitoring() {
     return Padding(
-      padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0, top: 15.0),
-      child: Column(children: [
-        Container(
-            alignment: Alignment.center,
+      padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0, top: 25.0),
+      child: Container(
+        decoration: BoxDecoration(
+            border: Border.all(color: Colors.black, width: 2),
+            borderRadius: BorderRadius.all(Radius.circular(5))),
+        child: Column(children: [
+          Container(
+              alignment: Alignment.center,
+              padding: EdgeInsets.only(top: 10),
+              width: 300,
+              child: Text(
+                "Log Terminal",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+              )),
+          Container(
+            width: 100,
+            height: 2,
+            color: Colors.black,
+          ),
+          Container(
             width: 300,
-            child: Text(
-              "Log Terminal",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-            )),
-        Container(
-          alignment: Alignment.topLeft,
-          width: 300,
-          child: Text("test", style: TextStyle(fontSize: 15)),
-        )
-      ]),
+            height: 400,
+            alignment: Alignment.topLeft,
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.only(left: 10),
+                child: Text(
+                    "test\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\ntest\n",
+                    style: TextStyle(fontSize: 15)),
+              ),
+            ),
+          )
+        ]),
+      ),
     );
   }
 }

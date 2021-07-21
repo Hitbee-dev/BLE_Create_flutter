@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/chankim/IndividualProject/ble_generator_flutter-master/build/app/intermediates/res/merged/debug/mipmap-mdpi_ble_generator.png.flat",
+        "source": "/Users/chankim/IndividualProject/ble_generator_flutter-master/android/app/src/main/res/mipmap-mdpi/ble_generator.png"
+    },
+    {
+        "merged": "/Users/chankim/IndividualProject/ble_generator_flutter-master/build/app/intermediates/res/merged/debug/mipmap-hdpi_ble_generator.png.flat",
+        "source": "/Users/chankim/IndividualProject/ble_generator_flutter-master/android/app/src/main/res/mipmap-hdpi/ble_generator.png"
+    },
+    {
+        "merged": "/Users/chankim/IndividualProject/ble_generator_flutter-master/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ble_generator.png.flat",
+        "source": "/Users/chankim/IndividualProject/ble_generator_flutter-master/android/app/src/main/res/mipmap-xxhdpi/ble_generator.png"
+    },
+    {
+        "merged": "/Users/chankim/IndividualProject/ble_generator_flutter-master/build/app/intermediates/res/merged/debug/mipmap-xhdpi_ble_generator.png.flat",
+        "source": "/Users/chankim/IndividualProject/ble_generator_flutter-master/android/app/src/main/res/mipmap-xhdpi/ble_generator.png"
+    },
+    {
+        "merged": "/Users/chankim/IndividualProject/ble_generator_flutter-master/build/app/intermediates/res/merged/debug/drawable-v21_launch_background.xml.flat",
+        "source": "/Users/chankim/IndividualProject/ble_generator_flutter-master/android/app/src/main/res/drawable-v21/launch_background.xml"
+    },
+    {
+        "merged": "/Users/chankim/IndividualProject/ble_generator_flutter-master/build/app/intermediates/res/merged/debug/mipmap-xxxhdpi_ble_generator.png.flat",
+        "source": "/Users/chankim/IndividualProject/ble_generator_flutter-master/android/app/src/main/res/mipmap-xxxhdpi/ble_generator.png"
+    }
+]

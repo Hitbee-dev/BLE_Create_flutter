@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/hitbee/dev/ble_create_flutter/BuildConfig.java
+ com.hitbee.dev.ble_create_flutter.BuildConfig

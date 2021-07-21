@@ -1,0 +1,2 @@
+pl/pszklarska/beacon_broadcast/BuildConfig.java
+ pl.pszklarska.beacon_broadcast.BuildConfig

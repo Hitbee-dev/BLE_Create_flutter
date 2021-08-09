@@ -16,6 +16,7 @@ class Setting extends StatefulWidget {
 class _SettingState extends State<Setting> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   String initUUID = "";
+  String uuid_buffer = "39ED98FF-2900-441A-802F-9C398FC199D2";
   String randomUUID = (Uuid()).v4();
   TextEditingController saved_uuid;
   TextEditingController saved_major;
@@ -53,9 +54,13 @@ class _SettingState extends State<Setting> {
                   _MinorLayout(),
                   _TxPowerLayout()
                 ]),
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  _UUIDButton("DefaultUUID", uuid_buffer, 5, 10),
+                  _UUIDButton("RandomUUID", randomUUID, 10, 5),
+                ]),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [_RandomUUIDButton(), _SaveButton()]),
+                    children: [_SaveButton()]),
                 _txpowerInfo()
               ],
             ),
@@ -170,14 +175,14 @@ class _SettingState extends State<Setting> {
     );
   }
 
-  Widget _RandomUUIDButton() {
+  Widget _UUIDButton(String uuidName, String uuid, double left, double right) {
     return Padding(
-      padding: EdgeInsets.only(left: 5, right: 20, top: 20),
+      padding: EdgeInsets.only(left: left, right: right, top: 20),
       child: RaisedButton(
-          child: Text("Random UUID"),
+          child: Text(uuidName),
           onPressed: () {
             setState(() {
-              saved_uuid.text = randomUUID;
+              saved_uuid.text = uuid;
             });
           }),
     );
@@ -185,13 +190,25 @@ class _SettingState extends State<Setting> {
 
   Widget _SaveButton() {
     return Padding(
-      padding: EdgeInsets.only(left: 20, right: 5, top: 20),
+      padding: EdgeInsets.only(left: 5, right: 5, top: 20),
       child: RaisedButton(
           child: Text("Save"),
           onPressed: () {
             setState(() {
-              if (saved_uuid.text == "") {
-                SnackPrint("Please enter the value of uuid");
+              if (saved_uuid.text.length != 36) {
+                if (saved_uuid.text.length == 32) {
+                  saved_uuid.text = saved_uuid.text.substring(0, 8) +
+                      "-" +
+                      saved_uuid.text.substring(8, 12) +
+                      "-" +
+                      saved_uuid.text.substring(12, 16) +
+                      "-" +
+                      saved_uuid.text.substring(16, 20) +
+                      "-" +
+                      saved_uuid.text.substring(20);
+                } else {
+                  SnackPrint("Please enter the value of uuid");
+                }
               } else if (saved_major.text == "") {
                 SnackPrint("Please enter the value of major");
               } else if (saved_minor.text == "") {
@@ -206,6 +223,7 @@ class _SettingState extends State<Setting> {
                         minor: saved_minor.text,
                         txpower: saved_txpower.text));
               }
+              //print("uuid length : ${saved_uuid.text.length}"); //36
             });
           }),
     );
@@ -213,7 +231,7 @@ class _SettingState extends State<Setting> {
 
   Widget _txpowerInfo() {
     return Container(
-      margin: EdgeInsets.only(left: 50, right: 50, top: 40, bottom: 20),
+      margin: EdgeInsets.only(left: 50, right: 50, top: 20, bottom: 20),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5.0),
           border: Border.all(color: Colors.black, width: 2)),

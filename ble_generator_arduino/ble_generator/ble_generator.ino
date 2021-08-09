@@ -18,10 +18,15 @@ bool check = false;
 bool start = false;
 bool sleepMode = false;
 bool wakeUp = true;
-unsigned long cur = 0;
-unsigned long pre = 0; //이전시간
-const long delayTime = 300; //잠들었다가 깨는 0.3초 대기시간
-String dummyName = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+bool uuid_check = false;
+extern volatile unsigned long timer0_millis;
+unsigned long cur_uuid = 0;
+unsigned long pre_uuid = 0;
+unsigned long result_uuid = 0;
+unsigned long cur_sleep = 0;
+unsigned long pre_sleep = 0; //이전시간
+const long delayTime = 5000; //잠들었다가 깨는 0.3초 대기시간
+String dummyName = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 
 void setup() {
   //기본 통신속도는 9600입니다.
@@ -31,12 +36,18 @@ void setup() {
 }
 
 void loop() {
-  //HM10.println(dummyName);
+  if (wakeUp && sleepMode) {
+    bufferFlush();
+  }
   // Buffer check
   if (!wakeUp) {
     HM10.println(dummyName);
+    timer0_millis = 0;
+    result_uuid = 0;
+    Serial.println("Wakeup");
+    HM10.read();
   }
-  if (HM10.available()) {
+  if (!sleepMode && HM10.available()) {
     wakeUp = true;
     byte data = HM10.read();
     buff[buff_idx++] = data;
@@ -44,23 +55,25 @@ void loop() {
       buff[buff_idx] = '\0';
       parse_buffer();
     }
-    Serial.write(data);
+    //Serial.write(data);
   }
-
   if (!sleepMode && wakeUp) {
     if (count > 0 && !start) {
       count--;
-      delay(100);
+      delay(50);
       HM10.println("AT+DISI?");
+      if(uuid_check == false) {
+        cur_uuid = millis(); 
+      }
       start = true;
     } else if (count == 0 && !start) {
       count = MAX_COUNT;
-      Serial.print("\nSUCCESS : ");
+      Serial.print("SUCCESS : ");
       Serial.println(success);
       Serial.print("Fail : ");
       Serial.println(fail);
       HM10.println("AT+SLEEP");
-      pre = millis();
+      pre_sleep = millis();
       sleepMode = true;
     }
     if (Serial.available()) {
@@ -75,12 +88,26 @@ void loop() {
 
 void parse_buffer(){
   String line = buff;
-  //Serial.println();
   if (line.substring(0, 8).equals("OK+DISC:")) {
     String mac = line.substring(17, 49);
-    //Serial.println(mac);
     if (mac.equals(CHECK_UUID)) {
       check = true;
+      pre_uuid = millis();
+      result_uuid = pre_uuid - cur_uuid;
+      Serial.print("\nUUID Search Time : ");
+      Serial.println(result_uuid);
+      Serial.print("\nUUID Search Current Time : ");
+      Serial.println(cur_uuid);
+      Serial.print("\nUUID Search Prevent Time : ");
+      Serial.println(pre_uuid);
+      pre_uuid = cur_uuid;
+      uuid_check = true;
+      success++;
+      HM10.println("AT+SLEEP");
+      pre_sleep = millis();
+      sleepMode = true;
+      check = false;
+      start = false;
     }
   }
   if (line.substring(0, 8).equals("OK+DISCE")) {
@@ -92,11 +119,14 @@ void parse_buffer(){
 }
 
 void checkTime() {
-  cur = millis();
-  if(cur - pre >= delayTime) {
-    //Serial.println("SEND WAKEUP");
+  cur_sleep = millis();
+  if(cur_sleep - pre_sleep >= delayTime) {
     wakeUp = false;
     count = MAX_COUNT;
     sleepMode = false;
   } 
+}
+
+void bufferFlush() {
+  HM10.read();
 }

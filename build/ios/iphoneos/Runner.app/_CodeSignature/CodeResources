@@ -86,7 +86,7 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		9JJQwZVGVt9QuoPHs0P5ry0WD1k=
+		pfkveMCiQW0SMEYwo2z7qtfwWpM=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -94,11 +94,11 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		msY9QZCBR4VBuPoD0Cf/FPSPZ/o=
+		hTCHAlu8WIaY2J1nHwwr7Abf2y4=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		xrwN7GP974f5SXVmp96Ps+TipKU=
+		Gu31CowhHnrqP+8r55UsCLQ37X0=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
 		<data>
-		GYHk1lEL9MLnC7K/n9uL2N/CWN0=
+		dad9llE/JDFqjANwPvLc7xM6TEU=
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
@@ -246,7 +246,7 @@
 		</data>
 		<key>Frameworks/beacon_broadcast.framework/beacon_broadcast</key>
 		<data>
-		c7ZGUFhUh7vxS85fIzbV1Z9F47g=
+		wf8L9CedAo2qabuKVtyunFt8wwc=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
@@ -310,7 +310,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3Efn3ojhokxCxWB+R8bCZ5zL6Lc=
+		59DbDifvzWmwOmvD+dAFKEtApTE=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -547,11 +547,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9JJQwZVGVt9QuoPHs0P5ry0WD1k=
+			pfkveMCiQW0SMEYwo2z7qtfwWpM=
 			</data>
 			<key>hash2</key>
 			<data>
-			SM3E+E4m18fhnFR+DPSyEH6MO/8a9uwlSHQocpvjqpI=
+			G4TC2/QbiH0Vm1za9nPu6hQ7Yhke+mGUZxkQluR7kq8=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -569,22 +569,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			msY9QZCBR4VBuPoD0Cf/FPSPZ/o=
+			hTCHAlu8WIaY2J1nHwwr7Abf2y4=
 			</data>
 			<key>hash2</key>
 			<data>
-			1ntOD1KNz93PBnQiNFcLcnouiu/O1mjXCFO64ecd8+I=
+			hffcv/XLud9KVtiJTwpgHVS94wUfoBJDjvjelKZ9H+c=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xrwN7GP974f5SXVmp96Ps+TipKU=
+			Gu31CowhHnrqP+8r55UsCLQ37X0=
 			</data>
 			<key>hash2</key>
 			<data>
-			boNBor2LsT/I2Mzs3AhzTlR7Yw+f+aAZMGV5AYxpiZE=
+			uo10NYem6c98fqDLI/thwNWRIBeCXmfORBD11GidG+M=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -602,11 +602,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GYHk1lEL9MLnC7K/n9uL2N/CWN0=
+			dad9llE/JDFqjANwPvLc7xM6TEU=
 			</data>
 			<key>hash2</key>
 			<data>
-			KePNVOj0AHwSPVRLgtdKGgWguHzH/EyyihK8dj8bIOc=
+			YzeQ23PU8v5RYQYfAYxhH8H9f5K+xS1ixt7gNfm1L3A=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/App</key>
@@ -987,11 +987,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			c7ZGUFhUh7vxS85fIzbV1Z9F47g=
+			wf8L9CedAo2qabuKVtyunFt8wwc=
 			</data>
 			<key>hash2</key>
 			<data>
-			QWJm/cvoryUBXMCWJQuMKsin78i1V68Lr2B8W8sObfA=
+			8NELE33rkyr5N1FhWbx5izacxfecaKOVvTsr5qrQFD8=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>

@@ -55,7 +55,7 @@ void loop() {
       buff[buff_idx] = '\0';
       parse_buffer();
     }
-    //Serial.write(data);
+    Serial.write(data);
   }
   if (!sleepMode && wakeUp) {
     if (count > 0 && !start) {
